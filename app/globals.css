@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* align-items: center;
+  margin-top: 150px; */
+  
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.container {
+  width: 600px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  background-color: #fceeee; /* Light background color */
+  border: 1px solid #caadad; /* Light border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto; /* Automatically center horizontally */
+}
+.mainHeading{
+  font-size: 40px;
+  color: rgb(138, 46, 4);
+  font-weight: 600;
+}
+.heading{
+  text-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #FF5733;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.counter {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #6b6161;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+a{
+  color: blue;
+}
+.add {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.minus {
+  background-color: #FF5733;
+  color: white;
+}
+
+.reset {
+  background-color: #3498db;
+  color: white;
+}
+
+.buttons button:hover {
+  filter: brightness(1.2); /* Add a hover effect */
+}
