@@ -8,7 +8,7 @@ const ImageModal = ({ isOpen, imageUrl, onClose }) => {
           className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-70"
           onClick={onClose}
         >
-          <div className="max-w-lg overflow-hidden bg-white rounded-lg shadow-xl">
+          <div className="max-w-lg overflow-hidden  rounded-lg shadow-xl">
             <img src={imageUrl} alt="" />
           </div>
         </div>

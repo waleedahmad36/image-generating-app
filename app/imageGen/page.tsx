@@ -60,12 +60,18 @@ export default function ImageGenerator({ image }) {
   const imageChunks = chunkArray(images, 3);
 
   return (
-    <div className="flex-col gap-1  m-4 justify-center items-center h-screen">
-      <div className="w-{80%} p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 ">
-        <h3 className="mb-2 m-6 text-3xl font-bold text-white m-4 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl">
-          Kanwal Heer
+    <div className="bg-black h-[130vh] w-full "  >
+    <div className="flex-col gap-1   justify-center items-center h-screen ">
+      <div className="w-{80%} p-4 text-center text-white  rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 ">
+        <div   >
+        <h3 className=" text-3xl font-bold  m-4 
+        flex justify-center align-middle gap-5 ">
+        <img src="https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/394668820_278497571825042_8984893206950098085_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEt-txCb5nvqr-FSSQF7ttgHT5xY5PTqTAdPnFjk9OpMEnk4WtFD0OrhB47RKCza0FHmvdXowOckyCiw2WlzsgG&_nc_ohc=KZaZq7OZ4DMAb5-upZk&_nc_pt=1&_nc_ht=scontent-ams2-1.xx&oh=00_AfDki8Y4o4O2gAdKi-e-vmSQgMct8JOFzLM--XTdCXS9Gw&oe=6636E8E9" 
+        className="w-[50px] h-[50px] rounded-full" />
+          Waleed Ahmad 
         </h3>
-        <h5 className="mb-2 m-4 text-3xl font-bold text-gray-900 dark:text-white">
+        </div>
+        <h5 className="mb-2 m-4 text-3xl font-bold text-gray-400 dark:text-white">
           NextGen Image Genrator App
         </h5>
         <p className="mb-5 m-2 text-base text-gray-500 sm:text-lg dark:text-gray-400">
@@ -73,17 +79,11 @@ export default function ImageGenerator({ image }) {
           generating photo-realistic images given any text input.
         </p>
 
-        <label
-          htmlFor="message"
-          className="block mb-2 text-sm font-large text-gray-900 dark:text-white"
-        >
-          Your message
-        </label>
         <textarea
           id="message"
-          rows={4}
-          className="block p-2.5 w-full m-3 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Text-to-image"
+          rows={2}
+          className=" w-full m-3  text-[35px] text-gray-300 bg-transparent rounded-lg border border-gray-800 focus:border-gray-500 outline-none pl-3 pt-2 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500"
+          placeholder="Write prompt to generate image 🔥"
           defaultValue={""}
           onChange={(e) => setText(e.target.value)}
         />
@@ -119,9 +119,9 @@ export default function ImageGenerator({ image }) {
         )}
       </div>
 
-      <div className="m-5 flex flex-wrap justify-center gap-1">
+      <div className="m-5 flex flex-wrap justify-center gap-1 ">
         {imageChunks.map((chunk, index) => (
-          <div key={index} className="flex justify-center gap-1">
+          <div key={index} className="flex flex-wrap justify-center gap-3 pb-5 ">
             {chunk.map((image, subIndex) => (
               <img
                 height={250}
@@ -141,6 +141,7 @@ export default function ImageGenerator({ image }) {
           onClose={closeModal}
         />
       </div>
+    </div>
     </div>
   );
 }
